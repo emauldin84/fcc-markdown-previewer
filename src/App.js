@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-
 import marked from 'marked'
+
+import Editor from './components/Editor'
+import Preview from './components/Preview'
+
 marked.setOptions({breaks: true})
 
 function App() {
@@ -25,8 +28,8 @@ function App() {
 
   return (
     <div className="App">
-      <textarea id="editor" onChange={handleSetText} value={text} rows="20" cols="80"/>
-      <div id="preview" dangerouslySetInnerHTML={{__html: preview}}/>
+      <Editor handleSetText={handleSetText} text={text} setText={setText} setPreview={setPreview}/>
+      <Preview preview={preview}/>
     </div>
   );
 }
