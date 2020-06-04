@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import marked from 'marked'
+marked.setOptions({breaks: true})
 
 function App() {
   const [preview, setPreview] = useState('')
@@ -24,8 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <textarea onChange={handleSetText} value={text} rows="20" cols="80"/>
-      <div dangerouslySetInnerHTML={{__html: preview}}/>
+      <textarea id="editor" onChange={handleSetText} value={text} rows="20" cols="80"/>
+      <div id="preview" dangerouslySetInnerHTML={{__html: preview}}/>
     </div>
   );
 }
@@ -39,7 +40,7 @@ const defaultText = "# Header \n\
 \n\
 `inline code` \n\
 \n\
-```block code``` \n\
+``` \n code block \n ``` \n\
 1. list item 1 \n\
 2. list item 2 \n\
 \n\
