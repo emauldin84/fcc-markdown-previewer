@@ -17,7 +17,6 @@ function App() {
 
   const handleSetPreview = (text) => {
     let mark = marked(text)
-    console.log(mark)
     setPreview(mark)
   }
 

@@ -15,6 +15,9 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.previewHeaderContainer{
+  width: 80%;
+}
 
 .editorContainer {
   margin-top: 20px;
@@ -22,7 +25,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 20px;
 }
 #editor {
   text-align: left;
@@ -43,9 +45,12 @@
 
 .previewContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 30px;
 }
+
 #preview {
   text-align: left;
   width: 80%;
@@ -65,3 +70,6 @@
   0 15px 15px rgba(0, 0, 0, 0.12);
 }
 
+.clear {
+  cursor: pointer;
+}
